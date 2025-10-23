@@ -30,10 +30,12 @@ func ExampleContainsN() {
 	l1 := []string{"Welt", "Haus", "Welt", "Welt"}
 	fmt.Println(ContainsN(l1, "Welt", 2))
 	fmt.Println(ContainsN(l1, "Haus", 2))
+	fmt.Println(ContainsN(l1, "Welt", 3))
 
 	// Output:
 	// true
 	// false
+	// true
 }
 func ExampleContainsNRow() {
 	l1 := []string{"Welt", "Haus", "Welt", "Welt", "Welt"}
