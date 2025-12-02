@@ -10,15 +10,27 @@ MAX. PUNKTE: 10
 // Liefert den leeren String, falls es kein solches Element gibt.
 //
 // Hinweis: Die Funktion muss nur mit kurzen Strings der Länge < 100 funktionieren.
+
 func ShortestAbc(list []string) string {
-	short := ""
+	empty := ""
 	for _, s := range list {
 		if len(s) >= 3 && s[:3] == "abc" {
-			if short == "" || len(s) < len(short) {
-				short = s
+			if empty == "" || len(s) < len(empty) {
+				empty = s
 			}
 		}
-
 	}
-	return short
+	return empty
 }
+
+// 	short := ""
+// 	for _, s := range list {
+// 		if len(s) >= 3 && s[:3] == "abc" {
+// 			if short == "" || len(s) < len(short) {
+// 				short = s
+// 			}
+// 		}
+
+// 	}
+// 	return short
+// }
