@@ -14,6 +14,22 @@ package aufgabe4
 // Für leere Listen soll für die Berechnung ggf. 0 verwendet werden.
 func ElementSums(l1, l2 []int) []int {
 	result := []int{}
-	// TODO
+	max := len(l1)
+	if len(l2) > max {
+		max = len(l2)
+	}
+	c1 := 0
+	c2 := 0
+	for i := 0; i < max; i++ {
+		if i < len(l1) {
+			c1 = l1[i]
+		}
+		if i < len(l2) {
+			c2 = l2[i]
+		}
+
+		result = append(result, c1+c2)
+	}
 	return result
+
 }

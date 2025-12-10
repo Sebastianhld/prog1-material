@@ -12,7 +12,8 @@ func CountOdd(list []int) int {
 	if len(list) == 0 {
 		return 0
 	}
-	one, result := list[0], CountOdd(list[1:])
+	one := list[0]
+	result := CountOdd(list[1:])
 	if one%2 != 0 {
 		result++
 	}
